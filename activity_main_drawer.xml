@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_entrepreneurship"
+            android:icon="@drawable/ic_business"
+            android:title="Entrepreneurship" />
+        <item
+            android:id="@+id/nav_quality_of_life"
+            android:icon="@drawable/ic_life_quality"
+            android:title="Quality of Life" />
+        <item
+            android:id="@+id/nav_artistic_works"
+            android:icon="@drawable/ic_art"
+            android:title="Artistic Works" />
+        <item
+            android:id="@+id/nav_environmental_awareness"
+            android:icon="@drawable/ic_environment"
+            android:title="Environmental Awareness" />
+        <item
+            android:id="@+id/nav_health_wellness"
+            android:icon="@drawable/ic_health"
+            android:title="Health & Wellness" />
+        <item
+            android:id="@+id/nav_social_justice"
+            android:icon="@drawable/ic_justice"
+            android:title="Social Justice" />
+    </group>
+</menu>
