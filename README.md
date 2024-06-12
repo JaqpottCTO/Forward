@@ -1,8 +1,3 @@
-2/2
-
-
-markdown
-Copy code
 # Rootcause App
 
 The Rootcause app aspires to be a transformative platform that empowers individuals and communities to address and solve critical societal issues. By offering a comprehensive, modular approach, the app engages users through interactive surveys, educational content, and community-driven initiatives. Each module is designed to provide tailored resources and actionable insights, fostering a deeper understanding and commitment to personal and societal improvement.
