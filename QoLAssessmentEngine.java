@@ -1,34 +1,36 @@
-package com.blerdU.rootworkapp.qol;
+package com.blerdU.rootworkapp;
 
 import java.util.List;
 
 public class QoLAssessmentEngine {
-
-    // Method to assess user and return assessment result
+    // Assessment logic
     public QoLAssessmentResult assessUser(QoLUserProfile userProfile) {
-        // Implementation for assessing the user based on their profile
-        // This would involve complex logic and interactions with SuggestionEngine subclasses
-        // For now, we return a dummy result
-        return new QoLAssessmentResult(userProfile, generateSuggestions(userProfile));
+        // Calculate merit level based on user activities and achievements
+        int newMeritLevel = calculateMeritLevel(userProfile);
+        userProfile.setMeritLevel(newMeritLevel);
+
+        // Generate suggestions based on profile and merit level
+        List<Suggestion> suggestions = getSuggestionEngines().stream()
+            .flatMap(engine -> engine.generateSuggestions(userProfile).stream())
+            .collect(Collectors.toList());
+
+        return new QoLAssessmentResult(userProfile, suggestions);
     }
 
-    // Method to get suggestion engines
+    private int calculateMeritLevel(QoLUserProfile userProfile) {
+        // Logic to calculate merit level
+        return 3; // Placeholder value
+    }
+
     public List<SuggestionEngine> getSuggestionEngines() {
-        // Return the list of SuggestionEngine implementations
+        // Return a list of all suggestion engines
         return List.of(
-                new HomelessnessSuggestionEngine(),
-                new JoblessnessSuggestionEngine(),
-                new SubstanceAbuseSuggestionEngine(),
-                new BehaviorDisorderSuggestionEngine(),
-                new InadequateIncomeSuggestionEngine(),
-                new PsychologicalDisorderSuggestionEngine()
+            new HomelessnessSuggestionEngine(),
+            new JoblessnessSuggestionEngine(),
+            new SubstanceAbuseSuggestionEngine(),
+            new BehaviorDisorderSuggestionEngine(),
+            new InadequateIncomeSuggestionEngine(),
+            new PsychologicalDisorderSuggestionEngine()
         );
-    }
-
-    // Dummy implementation for generating suggestions
-    private List<Suggestion> generateSuggestions(QoLUserProfile userProfile) {
-        // Logic to generate suggestions based on the user profile
-        // For now, returning an empty list
-        return List.of();
     }
 }
