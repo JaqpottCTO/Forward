@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Initialize PoolingSystem
         poolingSystem = new PoolingSystem();
+        poolingSystem.addMember(new Member("user1", 5000, 3, MemberType.PROJECT));
+        poolingSystem.addMember(new Member("user2", 4500, 2, MemberType.MENTOR));
+        poolingSystem.addMember(new Member("user3", 6000, 4, MemberType.FINANCE));
+        poolingSystem.addMember(new Member("user4", 5500, 5, MemberType.OPERATIONS));
+        poolingSystem.addMember(new Member("user5", 4800, 1, MemberType.DIGITAL));
     }
 
     @Override
@@ -91,6 +96,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public PoolingSystem getPoolingSystem() {
+        return poolingSystem;
+    }
 }
-
-
