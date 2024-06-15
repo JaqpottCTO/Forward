@@ -48,4 +48,13 @@ public class GamificationEngine {
     public Map<String, Integer> getLeaderboard() {
         return leaderboard;
     }
+
+    // Award points and badges related to the pooling mechanism
+    public void awardPoolingParticipationPoints(String userId, int points) {
+        calculatePoints(userId, points);
+    }
+
+    public void awardPoolingWinnerBadge(String userId) {
+        awardBadge(userId, "Pooling Winner");
+    }
 }
