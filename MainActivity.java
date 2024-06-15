@@ -78,9 +78,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new SocialJusticeFragment()).commit();
                 break;
+            case R.id.nav_toolset:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ToolsetFragment()).commit();
+                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
+
