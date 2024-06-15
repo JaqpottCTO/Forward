@@ -1,27 +1,28 @@
-package com.blerdU.rootworkapp.qol;
+package com.blerdU.rootworkapp;
 
 import java.util.List;
 
 public class QoLUserProfile {
-
     private String userId;
     private String name;
     private int age;
     private String gender;
     private String socioEconomicStatus;
     private List<String> challenges;
+    private int meritLevel;
 
-    // Constructor
-    public QoLUserProfile(String userId, String name, int age, String gender, String socioEconomicStatus, List<String> challenges) {
+    // Constructors
+    public QoLUserProfile(String userId, String name, int age, String gender, String socioEconomicStatus, List<String> challenges, int meritLevel) {
         this.userId = userId;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.socioEconomicStatus = socioEconomicStatus;
         this.challenges = challenges;
+        this.meritLevel = meritLevel;
     }
 
-    // Getter and Setter methods
+    // Getters and Setters
     public String getUserId() {
         return userId;
     }
@@ -68,5 +69,13 @@ public class QoLUserProfile {
 
     public void setChallenges(List<String> challenges) {
         this.challenges = challenges;
+    }
+
+    public int getMeritLevel() {
+        return meritLevel;
+    }
+
+    public void setMeritLevel(int meritLevel) {
+        this.meritLevel = meritLevel;
     }
 }
