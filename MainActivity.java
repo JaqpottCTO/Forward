@@ -8,11 +8,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    private PoolingSystem poolingSystem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+
+        // Initialize PoolingSystem
+        poolingSystem = new PoolingSystem();
     }
 
     @Override
@@ -49,43 +54,43 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Fragment selectedFragment = null;
+
         switch (item.getItemId()) {
             case R.id.nav_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HomeFragment()).commit();
+                selectedFragment = new HomeFragment();
                 break;
             case R.id.nav_entrepreneurship:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new EntrepreneurshipFragment()).commit();
+                selectedFragment = new EntrepreneurshipFragment();
                 break;
             case R.id.nav_quality_of_life:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new QualityOfLifeFragment()).commit();
+                selectedFragment = new QualityOfLifeFragment();
                 break;
             case R.id.nav_artistic_works:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ArtisticWorksFragment()).commit();
+                selectedFragment = new ArtisticWorksFragment();
                 break;
             case R.id.nav_environmental_awareness:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new EnvironmentalAwarenessFragment()).commit();
+                selectedFragment = new EnvironmentalAwarenessFragment();
                 break;
             case R.id.nav_health_wellness:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HealthWellnessFragment()).commit();
+                selectedFragment = new HealthWellnessFragment();
                 break;
             case R.id.nav_social_justice:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new SocialJusticeFragment()).commit();
+                selectedFragment = new SocialJusticeFragment();
                 break;
-            case R.id.nav_toolset:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ToolsetFragment()).commit();
+            case R.id.nav_pooling:
+                selectedFragment = new PoolingFragment();
                 break;
+        }
+
+        if (selectedFragment != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    selectedFragment).commit();
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
+
 
