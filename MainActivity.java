@@ -4,8 +4,10 @@ public class MainActivity extends AppCompatActivity {
     private QoLAssessmentEngine assessmentEngine;
     private ResourceMatcher resourceMatcher;
     private QoLProgressTracker progressTracker;
+    private ShowManager showManager;
     private Button btnAssess;
     private TextView tvRecommendations;
+    private Button btnShowVoting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +19,16 @@ public class MainActivity extends AppCompatActivity {
         assessmentEngine = new QoLAssessmentEngine();
         resourceMatcher = new ResourceMatcher();
         progressTracker = new QoLProgressTracker();
+        showManager = new ShowManager();
 
         // Setup UI components
         btnAssess = findViewById(R.id.btnAssess);
         tvRecommendations = findViewById(R.id.tvRecommendations);
+        btnShowVoting = findViewById(R.id.btnShowVoting);
 
-        // Set up button click listener
+        // Set up button click listeners
         btnAssess.setOnClickListener(v -> handleAssessButtonClick());
+        btnShowVoting.setOnClickListener(v -> handleShowVotingClick());
     }
 
     private void handleAssessButtonClick() {
@@ -35,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         displayRecommendations(suggestions);
     }
 
+    private void handleShowVotingClick() {
+        Intent intent = new Intent(this, ShowActivity.class);
+        startActivity(intent);
+    }
+
     private void displayRecommendations(List<Suggestion> suggestions) {
         StringBuilder recommendationText = new StringBuilder();
         for (Suggestion suggestion : suggestions) {
@@ -42,4 +52,4 @@ public class MainActivity extends AppCompatActivity {
         }
         tvRecommendations.setText(recommendationText.toString());
     }
-            }
+}
