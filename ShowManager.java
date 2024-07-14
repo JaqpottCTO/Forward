@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 public class ShowManager {
     
     private List<Show> shows;
@@ -14,8 +18,13 @@ public class ShowManager {
         return shows;
     }
 
-    public void voteForShow(Show show) {
-        show.incrementVotes();
+    public void voteForShow(String showId) {
+        for (Show show : shows) {
+            if (show.getId().equals(showId)) {
+                show.incrementVotes();
+                break;
+            }
+        }
     }
 
     public Show getTopShow() {
