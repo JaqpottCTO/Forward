@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class SponsorshipManager {
     private List<Sponsor> sponsors;
     private List<Event> events;
