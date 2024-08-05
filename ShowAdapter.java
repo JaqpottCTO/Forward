@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class ShowAdapter extends RecyclerView.Adapter<ShowAdapter.ShowViewHolder> {
 
     private List<Show> shows;
