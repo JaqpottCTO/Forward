@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class TrainingProgram {
     private String id;
     private String name;
