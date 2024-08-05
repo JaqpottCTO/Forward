@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class ShowActivity extends AppCompatActivity {
 
     private ShowManager showManager;
