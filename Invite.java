@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class Invite {
     private String id;
     private String email;
