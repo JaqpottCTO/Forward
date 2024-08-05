@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder> {
     private List<Team> teams;
 
