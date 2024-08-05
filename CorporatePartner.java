@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class CorporatePartner {
     private String id;
     private String name;
