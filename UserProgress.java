@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class UserProgress {
     private boolean isUnlocked;
     private Map<String, Boolean> completedObjectives;
