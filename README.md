@@ -10,21 +10,23 @@ The Rootcause app aspires to be a transformative platform that empowers individu
 
 ## RootWork Doors
 Each door in the RootWork app represents a significant milestone or thematic area. Below are the proposed objectives for these doors, ensuring they align with the themes and goals of the app:
+
 1.	Door 1: Fundamental Progress: Tech Makes Better Faster
-o	Objective: Equip participants with essential digital literacy and basic technical skills.
-o	Objective Statement: "Complete the Digital Literacy course and demonstrate proficiency in essential software applications."
+- **Objective: Equip participants with essential digital literacy and basic technical skills.
+- **Objective Statement: "Complete the Digital Literacy course and demonstrate proficiency in essential software applications."
 2.	Door 2: Tools as Force Multipliers
-o	Objective: Introduce and train participants in using powerful digital tools like Canva, ChatGPT, Slack, and LinkedIn.
-o	Objective Statement: "Create and present a professional portfolio using Canva and LinkedIn; participate in a team communication exercise using Slack."
+- **Objective: Introduce and train participants in using powerful digital tools like Canva, ChatGPT, Slack, and LinkedIn.
+- **Objective Statement: "Create and present a professional portfolio using Canva and LinkedIn; participate in a team communication exercise using Slack."
 3.	Door 3: Unlocking Personal Development
-o	Objective: Foster personal growth through self-assessment and tailored development plans.
-o	Objective Statement: "Complete a comprehensive self-assessment and set personal development goals with a customized action plan."
+- **Objective: Foster personal growth through self-assessment and tailored development plans.
+- **Objective Statement: "Complete a comprehensive self-assessment and set personal development goals with a customized action plan."
 4.	Door 4: Building Professional Skills
-o	Objective: Develop job-ready skills and professional etiquette.
-o	Objective Statement: "Participate in a job interview workshop and develop a resume; complete a project demonstrating professional competencies."
+- **Objective: Develop job-ready skills and professional etiquette.
+- **Objective Statement: "Participate in a job interview workshop and develop a resume; complete a project demonstrating professional competencies."
 5.	Door 5: Community Engagement and Contribution
-o	Objective: Encourage community involvement and contribution.
-o	Objective Statement: "Organize or participate in a community service project, and document the experience and its impact."
+- **Objective: Encourage community involvement and contribution.
+- **Objective Statement: "Organize or participate in a community service project, and document the experience and its impact."
+
 These classes and objectives are structured to ensure a smooth and engaging user experience, facilitating the tracking of user progress and the management of expert contributions to the app's content. This design supports the RootWork app's mission to provide comprehensive and tailored support to its users.
 
 
