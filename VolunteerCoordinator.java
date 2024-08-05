@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class VolunteerCoordinator {
     private List<Volunteer> volunteers;
     private List<Event> events;
