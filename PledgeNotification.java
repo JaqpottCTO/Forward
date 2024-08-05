@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class PledgeNotification {
     private String eventId;
     private String pledgeId;
