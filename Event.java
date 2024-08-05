@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class Event {
     private String eventId;
     private String eventName;
