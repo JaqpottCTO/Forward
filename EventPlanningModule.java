@@ -1,3 +1,5 @@
+package com.blerdU.rootworkapp;
+
 public class EventPlanningModule {
     private List<Event> events;
     private Map<Date, List<Event>> eventCalendar;
