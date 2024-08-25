@@ -1,7 +1,10 @@
-package com.blerdU.rootworkapp;
+package com.evertisky.rootworkv1.core;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class DoorProgressTracker {
     private DatabaseReference databaseRef;
